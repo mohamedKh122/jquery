@@ -1,0 +1,276 @@
+/* Start Main Rules */
+:root{
+    --main-color: rgba(214, 46, 51, 0.6);
+    --text-color1:#444444;
+    --text-color2:#777777;
+    --contact-content-color: #D62E33 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    width: 90%;
+    margin-inline: auto;
+}
+body{
+    font-family: "Blinker", sans-serif;
+}
+
+/* End Main Rules */
+#home h1, #home p{
+color: white;
+}
+#home .info{
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+h1{
+    font-size: 60px;
+}
+#home{
+    height: 70vh;
+    padding: 100px 0;
+    background-image: url('/Photos/events-heavenly-header.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#home::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+#home .navBar li{
+    padding: 20px 8px 20px 32px;
+}
+#home .navBar a{
+    color: white;
+    font-size: 25px;
+    transition: all 0.3s;
+}
+#home .navBar a:hover{
+    color: rgb(141, 7, 7);
+}
+.navBar{
+    position: fixed;
+    background-color: black;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 50px  0 0 0 ;
+    width: 200px;
+    z-index: 9999;
+    overflow: hidden;
+    white-space: normal;
+}
+#home .navBar i{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transition: all 0.5s;
+}
+#home .navBar i:hover{
+    color: rgb(141, 7, 7);
+    cursor: pointer;
+}
+.navInfo{
+    position: relative;
+}
+#home .openNav{
+color: white;
+font-size: 25px;
+position: absolute;
+width: 81px;
+left: 0% ;
+top:50%;
+transform: translateY(-50%);
+z-index: 9;
+margin-left: 10px;
+cursor: pointer;
+}
+/*Start Slider*/
+#slider{
+    padding-block: 50px;
+
+}
+#slider .card{
+    text-align: center !important;
+    overflow: hidden;
+}
+#slider .card h3{
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--main-color);
+}
+#slider .info{
+    height: 0;
+    transition: height 0.2s linear;
+    background-color: rgb(212, 212, 212);
+    line-height: 2;
+}
+#slider .content{
+    width: 900px;
+    margin: auto;
+    max-width: 100%;
+}
+/* .vip{
+
+    padding: 0px ;
+    background-color: #CCCCCC;
+    padding: 10px;
+    line-height: 1.5;
+} */
+#slider .active + .info{
+    /* height: auto; */
+}
+/* End Slider */
+/*Start Count Down*/
+#details{
+    background-image: url('/Photos/invitation-2508607__340.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: 30px;
+    position: relative;
+    z-index: 9;
+}
+#details::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+#details .countDown{
+    display: flex;
+    justify-content: space-evenly;
+}
+#details .item{
+    color: white;
+    font-size: 30px;
+    border: 4px solid white;
+    text-align: center;
+    width: 200px;
+    padding-block: 50px;
+}
+/*End Count Down*/
+/*Start Contact*/
+#content{
+    padding-block: 50px;
+}
+#content .title{
+    margin-bottom: 20px;
+}
+#content h2{
+    color: #444444;
+    font-size: 35px;
+}
+#content h2 + p{
+    text-align: center;
+    color: var(--text-color2);
+}
+#content .flexBox{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+#content .flexBox .info{
+    flex-basis: 50%;
+}
+#content .info1 h3{
+    color: var(--text-color1);
+    font-size: 30px;
+}
+#content .info1 h3 + p{
+    color: var(--text-color2);
+    margin: 10px 0 30px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+#content .info1 .information h5{
+    color: var(--text-color2);
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: normal;
+}
+#content .info1 .information h5 i{
+    margin: 0 5px 0 0;
+}
+#content .info1 .information h5 span{
+    color: var(--contact-content-color)
+}
+#content .info1 .icons{
+    margin-top: 30px;
+}
+#content .info1 .icons i{
+    margin: 0 8px 0 8px;
+    font-size: 19px;
+    color: var(--text-color2);
+    border: 1px solid var(--text-color2);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#content .info1 .icons i:hover{
+    color: white;
+    background-color: var(--contact-content-color);
+    border-color: var(--contact-content-color);
+}
+input, textarea{
+    outline: 0;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+textarea{
+height: 150px;
+}
+input:focus ,textarea:focus{
+    border-color: #80bdff;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+#content .info2 h4{
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#content .info2 h4 span{
+    color: var(--contact-content-color);
+}
+#content .info2 button{
+    color: white;
+    background-color: var(--contact-content-color);
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+}
+/*End Contact*/
+
